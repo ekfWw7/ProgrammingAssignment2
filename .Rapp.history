@@ -1,0 +1,776 @@
+nobs14a <- sum(complete.cases(read.csv(files_list[14])))
+nobs14a
+nobs13a <- sum(complete.cases(read.csv(files_list[13])))
+nobs13a
+nobs1a <- sum(complete.cases(read.csv(files_list[1])))
+nobs1a
+complete <- function(directory, ID = 1:332)#
+  nobs_num <- numeric(0)#
+  count <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in ID) {#
+    nobs_num <- c(nobs_num, sum(complete.cases(read.csv(files_list[i]))))#
+    count <- c(count, i)#
+    }    #
+  complete_df <- data.frame(id = count, nobs = nobs_num)#
+  }
+complete <- function(directory, ID = 1:332) {#
+  nobs_num <- numeric(0)#
+  count <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in ID) {#
+    nobs_num <- c(nobs_num, sum(complete.cases(read.csv(files_list[i]))))#
+    count <- c(count, i)#
+    }    #
+  complete_df <- data.frame(id = count, nobs = nobs_num)#
+  }
+complete(specdata,1:10)
+complete_df
+complete <- function(directory, ID = 1:332) {#
+  nobs_num <- numeric(0)#
+  count <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in ID) {#
+    nobs_num <- c(nobs_num, sum(complete.cases(read.csv(files_list[i]))))#
+    count <- c(count, i)#
+    }    #
+  complete_df <- data.frame(id = count, nobs = nobs_num)#
+  complete_df#
+  }
+complete(specdata,1:10)
+complete(specdata, c("5", "20", "26"))
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete_df <- complete(specdata)#
+  nobsdf_1 <- nobs[completedf$nobs > threshold, ]  #
+  for (cid in nobsdfr_1$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete_df <- complete("specdata")#
+  nobsdf_1 <- nobs[complete_df$nobs > threshold, ]  #
+  for (cid in nobsdfr_1$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+get_data <- function(directory, ID = 1:332) {#
+  files_list <- list.files(directory, full.names = TRUE)#
+}
+corr(specdata, 150)
+head(nobsdf_1)
+head(complete_df)
+complete()
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  nobsdf_1 <- nobs[complete_df$nobs > threshold, ]  #
+  for (cid in nobsdfr_1$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  nobsdf_1 <- nobs[complete_df$nobs > threshold, ]  #
+  for (cid in nobsdf_1$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  nobsdf_1 <- nobs[complete_df$nobs > threshold, ]  #
+  for (cid in nobsdf_1$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  head(complete_df)#
+  nobs_df <- complete_df#
+  nobsdf_1 <- nobs[nobs_df$nobs > threshold, ]  #
+  for (cid in nobsdf_1$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+complete("specdata", 1:332)
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  nobsdf <- nobs[complete_df$nobs > threshold, ]  #
+  for (cid in nobsdf$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  for (cid in nobsdf$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  nobsdf <- complete_df[complete_df$nobs > threshold, ] #
+  for (cid in nobsdf$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+    }#
+  return(corr_data)#
+  }
+corr(specdata, 150)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  nobsdf <- complete_df[complete_df$nobs > threshold, ] #
+  for (cid in nobsdf$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+  }  #
+}
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  nobsdf <- complete_df[complete_df$nobs > threshold, ] #
+  for (cid in nobsdf$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+  }  #
+  summary(corr_data)#
+  head(corr_data)#
+}
+corr(specdata, 150)
+corr(specdata, 300)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  head(complete_df)#
+  nobsdf <- complete_df[complete_df$nobs > threshold, ] #
+  for (cid in nobsdf$id) {#
+    data_2 <- read.csv(files_list[cid])#
+    corr_data <- c(corr_data, cor(data_2$sulfate, data_2$nitrate, use = "pairwise.complete.obs"))#
+  }  #
+  summary(corr_data)#
+  head(corr_data)#
+}
+source("corr.R")
+cr <- corr("specdata")
+cr <- sort(cr)
+set.seed(868)
+out <- round(cr[sample(length(cr), 5)], 4)
+aste(out, collapse = "\n")
+paste(out, collapse = "\n")
+set.seed(868)
+corr(specdata, 150)
+summary(corr_data)
+cr <- corr("specdata", 150)
+summary(cr)
+head(cr)
+cr <- corr("specdata", 400)
+head(cr)
+summary(cr)
+cr <- corr("specdata", 5000)
+corr <- function(directory, threshold = 0) {  #
+  corr_data <- numeric(0)#
+  get_data(directory,1:332)#
+  complete(directory, 1:332)#
+  complete_df <- complete("specdata")#
+  for (cid in complete_df$id) {#
+    if (complete_df$nobs > threshold) { #
+      nobsdf <- read.csv(files_list[cid]) #
+      cr<- c(corr_data, cor(nobsdf$sulfate, nobsdf$nitrate, use = "pairwise.complete.obs"))#
+      }#
+  }  #
+summary(cr)#
+head(cr)#
+}
+cr <- corr("specdata", 5000)
+get_data <- function(directory, ID = 1:332) {#
+  files_list <- list.files(directory, full.names = TRUE)#
+}#
+#
+corr <- function(directory,threshold = 0) {#
+  cr_dat <- numeric (0)#
+  count <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in 1:332) {#
+    data <- read.csv(files_list[i])#
+    nobs_num <- sum(complete.cases(data))#
+    if (nobs_num > threshold) {#
+      cr_dat<- c(cr_dat, cor(data$sulfate, data$nitrate, use = "pairwise.complete.obs"))#
+      }#
+  }#
+cr <- cr_dat#
+summary(cr)#
+head(cr)#
+tail(cr)#
+}
+corr(specdata,0)
+summary(cr)
+head(cr)
+tail(cr)
+head(cr_dat)
+for (i in 1:332) {#
++     data <- read.csv(files_list[i])#
++     nobs_num <- sum(complete.cases(data))#
++     if (nobs_num > threshold) {#
++       cr_dat<- c(cr_dat, cor(data$sulfate, data$nitrate, use = "pairwise.complete.obs"))#
++       }
+corr <- function(directory,threshold = 0) {#
+  cr_dat <- numeric (0)#
+  count <- numeric(0)#
+  nobs <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in 1:332) {#
+    data <- read.csv(files_list[i])#
+    nobs_num <- sum(complete.cases(data))#
+    if (nobs_num > threshold) {#
+      count <- c(count,i)#
+      nobs <- c(nobs, nobssum)#
+      cr_dat<- c(cr_dat, cor(data$sulfate, data$nitrate, use = "pairwise.complete.obs"))#
+    } #
+  }#
+cr <- cr_dat#
+}
+corr(specdata,150)
+corr <- function(directory,threshold = 0) {#
+  cr_dat <- numeric (0)#
+  count <- numeric(0)#
+  nobs <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in 1:332) {#
+    data <- read.csv(files_list[i])#
+    nobs_num <- sum(complete.cases(data))#
+    if (nobs_num > threshold) {#
+      count <- c(count,i)#
+      nobs <- c(nobs, nobs_num)#
+      cr_dat<- c(cr_dat, cor(data$sulfate, data$nitrate, use = "pairwise.complete.obs"))#
+    } #
+  }#
+cr <- cr_dat#
+}
+corr(specdata,150)
+head(cr)
+cr
+head(cr_dat)
+cr_dat
+head(data)
+data
+head(nobs)
+corr <- function(directory,threshold = 0) {#
+  cr_dat <- numeric (0)#
+  count <- numeric(0)#
+  nobs_dat <- numeric(0)#
+  getdata("specdata",1:332)#
+  for (i in 1:332) {#
+    data <- read.csv(files_list[i])#
+    nobs_num <- sum(complete.cases(data))#
+    if (nobs_num > threshold) {#
+      count <- c(count,i)#
+      nobs_dat <- c(nobs_dat, nobs_num)#
+      cr_dat<- c(cr_dat, cor(data$sulfate, data$nitrate, use = "pairwise.complete.obs"))#
+    } #
+  }#
+cr <- cr_dat#
+}#
+summary(cr)#
+head(cr)#
+tail(cr)#
+}
+corr(specdata,150)
+makeVector <- function(x = numeric()) {#
+  m <- NULL#
+  set <- function(y) {#
+    x <<- y #
+    m <<- NULL#
+}#
+  get <- function() x#
+  setmean <- function(mean) m <<-mean#
+  getmean <- function() m #
+  list(set = set, get = get,#
+       setmean = setmean)#
+}
+set(5)
+makeVector(5)
+x
+set(2)
+$set(2)
+trial <- makeVector(10)
+x
+m
+$set(5)
+trial$set(10)
+x
+return(x)
+7
+y
+m
+cachemean <- function(x, ...) {#
+  m <- x$getmean()#
+  if(!is.null(m)) {#
+    message("getting cached data")#
+    return(m)#
+  }#
+  data <- x$get()#
+  m <- mean(data, ...)#
+  x$setmean(m)#
+  m#
+}
+trial <- cachemean(1,2,3,5)
+trial <- cachemean(1,...)
+trial - cachemean()
+trial - cachemean(7, ...)
+trial <- makeVector(10)
+trial$set(20)
+trial$get()
+trial$setmean()
+trial$setmean(15)
+trial$getmean()
+cachemean <- function(x, ...) {#
+  m <- x$getmean()#
+  if(!is.null(m)) {#
+    message("getting cached data")#
+    return(m)#
+  }#
+  data <- x$get()#
+  m <- mean(data, ...)#
+  x$setmean(m)#
+  m#
+}
+trial2 <- cachemean()
+trial2 <- cachemean(x,...)
+trial2 <- cachemean(x)
+trial2 <- cachemean(15)
+trial2 <- cachemean(15, 10, 20)
+trial2 <- cachemean(10)
+L?N
+swirl()
+library(swirl)
+swirl()
+q()
+swirl()
+head(flags)
+dim(flags)
+viewinfo(flags)
+class(flags)
+cls_list <- lapply(flags, class)
+cls_list
+class(cls_list)
+as.character(cls_list)
+?sapply
+cls_vect <- sapply(flags, class)
+class(cls_vect)
+sum(flags$orange)
+flag_colors <- flags, 11:17]
+head(flags)
+flag_colors <- flags[,11:17]
+head(flag_colors)
+lapply(flag_colors, sum)
+sapply(flag_colors, sum)
+lapply(flag_colors, mean)
+sapply(flag_colors, mean)
+swirl()
+flag_shapes <- flags[, 19:23]
+lapply(flag_shapes, range)
+shape_mat <- sapply(flag_shapes, range)
+shape_mat
+class(shape_mat)
+unique(c(3,4,5,5,5,6,6))
+unique_vals <- lapply(flags, unique)
+unique_vals
+len_item <- lapply(unique_vals, length)
+len_item <- sapply(unique_vals, length)
+sapply(unique_vals, length)
+sapply(flags, unique)
+lapply(unique_vals, function(elem) elem[2])
+sapply(flags,unique)
+vapply(flags, unique, numeric(1))
+ok()
+sapply(flags, class)
+vapply(flags, class, character(1))
+?tapply
+table(flags$landmass)
+table(flags$animate)
+tapply(flags$animate, flags$landmass, mean)
+tapply(flags$population, flags$red, summary)
+tapply(flags$population, flags$landmass, summary)
+ls(plants)
+ls()
+class(plants)
+dim(plants)
+nrow(plants)
+ncol(plants)
+object.size(plants)
+name(plants)
+cname(plants)
+name(plants)
+names(plants)
+head(plants)
+head(plants,10)
+(tail, plants,15)
+tail(plants,15)
+summary(plants)
+table(plants$Active_Growth_Period)
+str(plants)
+makeVector <- function(x = numeric()) {#
+        m <- NULL#
+        set <- function(y) {#
+                x <<- y#
+                m <<- NULL#
+        }#
+        get <- function() x#
+        setmean <- function(mean) m <<- mean#
+        getmean <- function() m#
+        list(set = set, get = get,#
+             setmean = setmean,#
+             getmean = getmean)#
+}#
+cachemean <- function(x, ...) {#
+        m <- x$getmean()#
+        if(!is.null(m)) {#
+                message("getting cached data")#
+                return(m)#
+        }#
+        data <- x$get()#
+        m <- mean(data, ...)#
+        x$setmean(m)#
+        m#
+}
+vector <- makeVector(c(1,2,3))
+cachemean(vector)
+vector$set(c(4,5,6))
+cachemean(vector)
+m <- matrix(c(-1,-2,1,1) 2,2)
+m <- matrix(c(-1,-2,1,1) 2,2))
+m <- matrix(c(-1, -2, 1, 1), 2,2)
+m
+x <- makeCacheMatrix(m)
+makeCacheMatrix <- function(x = matrix()) {#
+  # function that creates a matrx.... that is really a list#
+  # containing four separate functions to #
+  # 1) set value of vector#
+  # 2) set get value of the vector#
+  # 3) set value of the mean#
+  # 4) get the value of the mean#
+  s <- NULL  #
+  # NULL is used mainly to represent the lists with zero length, #
+  # and is often returned by expressions and functions whose value is undefined#
+  # here we're specifying that m wil be an undefined variable #
+  # then we create a new (nested) function called "set" that takes y as a parameter#
+  set <- function(y) {#
+    # here we reassign the value of x to equal y#
+    # m is again null (undefined)#
+    x <<- y #
+    s <<- NULL#
+  }#
+  # new function called "get" #
+  # this function returns "x"#
+  get <- function(){#
+    x#
+  }#
+  # now function "setmean", which assigns value of mean to m #
+  set_inverse <- function(inverse) {#
+    s <<- inverse #
+  }#
+  #another function "getmean" returns value of m#
+  get_inverse <- function() {#
+    s#
+  }#
+  # now we assign names to each of the above functions so they can be called later#
+  # the line below returns a vector-type list of functions #
+  list(set = set, get = get,#
+       set_inverse = set_inverse)#
+}#
+# the following function finds the mean of the vector#
+# created by makeVector. It first checks to see if the mean has#
+# already been calculted. If it has, it retrieves this calculated#
+# mean and returns it. Otherwise, it calculates the#
+# mean of the data and sets the value of the mean in the cache#
+# through the setmean function specified in makeVector#
+cacheSolve <- function(x = matrix(), ...) {#
+  # first, the function tries to retreive mean from the cache #
+  s <- x$get_inverse()#
+  # next we test -- if m is not a null value (as it would be if no mean#
+  # has been calculated) the function lets us know it is retrieving#
+  # a cached value, and returns this mean #
+  if(!is.null(s)) {#
+    message("getting cached data")#
+    return(s)      # exits function without further calculation#
+  }#
+  # alternatively, if m is a null value, the function #
+  # then calls the get function from makeVector#
+  # it then calculates the mean of the vector#
+  # it then makes certain that m is assigned the value of this mean#
+  # in the cache#
+  # and returns that value#
+  data <- x$get()#
+  s <- solve(data, ...)    # otherwise computes mean#
+  x$set_inv(s)            # calls function to cache that new mean#
+  s                       # returns mean#
+}
+makeCacheMatrix <- function(x = matrix()) {#
+  # function that creates a matrx.... that is really a list#
+  # containing four separate functions to #
+  # 1) set value of vector#
+  # 2) set get value of the vector#
+  # 3) set value of the mean#
+  # 4) get the value of the mean#
+  s <- NULL  #
+  # NULL is used mainly to represent the lists with zero length, #
+  # and is often returned by expressions and functions whose value is undefined#
+  # here we're specifying that m wil be an undefined variable #
+  # then we create a new (nested) function called "set" that takes y as a parameter#
+  set <- function(y) {#
+    # here we reassign the value of x to equal y#
+    # m is again null (undefined)#
+    x <<- y #
+    s <<- NULL#
+  }#
+  # new function called "get" #
+  # this function returns "x"#
+  get <- function(){#
+    x#
+  }#
+  # now function "setmean", which assigns value of mean to m #
+  setSolve <- function(inverse) {#
+    s <<- inverse #
+  }#
+  #another function "getmean" returns value of m#
+  getSolve <- function() {#
+    s#
+  }#
+  # now we assign names to each of the above functions so they can be called later#
+  # the line below returns a vector-type list of functions #
+  list(set = set, get = get,#
+       setSolve = getSolve)#
+}#
+# the following function finds the mean of the vector#
+# created by makeVector. It first checks to see if the mean has#
+# already been calculted. If it has, it retrieves this calculated#
+# mean and returns it. Otherwise, it calculates the#
+# mean of the data and sets the value of the mean in the cache#
+# through the setmean function specified in makeVector#
+cacheSolve <- function(x = matrix(), ...) {#
+  # first, the function tries to retreive mean from the cache #
+  s <- x$getSolve()#
+  # next we test -- if m is not a null value (as it would be if no mean#
+  # has been calculated) the function lets us know it is retrieving#
+  # a cached value, and returns this mean #
+  if(!is.null(s)) {#
+    message("getting cached data")#
+    return(s)      # exits function without further calculation#
+  }#
+  # alternatively, if m is a null value, the function #
+  # then calls the get function from makeVector#
+  # it then calculates the mean of the vector#
+  # it then makes certain that m is assigned the value of this mean#
+  # in the cache#
+  # and returns that value#
+  data <- x$get()#
+  s <- solve(data, ...)    # otherwise computes mean#
+  x$set_inv(s)            # calls function to cache that new mean#
+  s                       # returns mean#
+}
+m <- matrix (c(-1,-2, 1,1), 2,2)
+m
+x <- makeCacheMatrix(m)
+x$get()
+s <- x$getSolve()
+getwd()
+list.files
+ls()
+getwd()
+list.files()
+ls()
+setwd(~/ProgrammingAssignment2)
+setwd("~/ProgrammingAssignment2")
+ls()
+getwd()
+list.files()
+head(cachematrix.R)
+str(cachematrix.R)
+makeCacheMatrix <- function(x = matrix()) {#
+  # function that creates a matrx.... that is really a list#
+  # containing foMur separate functions to #
+  # 1) set value of vector#
+  # 2) set get value of the vector#
+  # 3) set value of the mean#
+  # 4) get the value of the mean#
+  s <- NULL  #
+  # NULL is used mainly to represent the lists with zero length, #
+  # and is often returned by expressions and functions whose value is undefined#
+  # here we're specifying that m wil be an undefined variable #
+  # then we create a new (nested) function called "set" that takes y as a parameter#
+  set <- function(y) {#
+    # here we reassign the value of x to equal y#
+    # m is again null (undefined)#
+    x <<- y #
+    s <<- NULL#
+  }#
+  # new function called "get" #
+  # this function returns "x"#
+  get <- function(){#
+    x#
+  }#
+  # now function "setmean", which assigns value of mean to m #
+  setSolve <- function(inverse) {#
+    s <<- inverse #
+  }#
+  #another function "getmean" returns value of m#
+  getSolve <- function() {#
+    s#
+  }#
+  # now we assign names to each of the above functions so they can be called later#
+  # the line below returns a vector-type list of functions #
+  list(set = set, get = get,#
+       setSolve = setSolve, getSolve = getSolve)#
+}#
+# the following function finds the mean of the vector#
+# created by makeVector. It first checks to see if the mean has#
+# already been calculted. If it has, it retrieves this calculated#
+# mean and returns it. Otherwise, it calculates the#
+# mean of the data and sets the value of the mean in the cache#
+# through the setmean function specified in makeVector#
+cacheSolve <- function(x, ...) {#
+  # first, the function tries to retreive mean from the cache #
+  s <- x$getSolve()#
+  # next we test -- if m is not a null value (as it would be if no mean#
+  # has been calculated) the function lets us know it is retrieving#
+  # a cached value, and returns this mean #
+  # if m is a null value, the function #
+  # then calls the get function from makeVector#
+  # it then calculates the mean of the vector#
+  # it then makes certain that m is assigned the value of this mean#
+  # in the cache#
+  # and returns that value#
+  if(is.null(s)) {#
+    dat <- x$get()#
+    s <- solve(dat,...)    # otherwise computes mean#
+    x$setSolve(s)            # calls function to cache that new mean#
+    s                       # returns mean    #
+  }  #
+   else {#
+    message("getting cached data")#
+    return(s)      # exits function without further calculation#
+  }#
+}
+m = matrix(c(9,10,3,20,25,30,35,40,45,50,3,8,65,70,75,80), nrow=4, byrow=T)
+nm <- makeMatrix(m)
+nm <- makeCacheMatrix(m)
+cacheSolve(nm)
+solve(nm)
+im <- cacheSolve(nm)
+om <- makeCacheMatrix(im)
+cacheSolve(om)
+1/9
+A <- matrix(1:4,2)
+A
+solve(A)
+A %*% solve (A)
+det(A)
+B <- matrix(1:9, 3)
+B
+det(B)
+solve(B)
+?solve
+?det
+m <- matrix(c(1:20)4,5)
+m <- matrix(c(1:20),4,5)
+m
+m1 <- makeCacheMatrix(m)
+cacheSolve(m)
+cacheSolve(m1)
+mat <- makeCacheMatrix(m)
+cacheSolve(mat)
+makeCacheMatrix <- function(x = matrix()) {#
+  s <- NULL  #
+  set <- function(y) {#
+    x <<- y #
+    s <<- NULL#
+  }#
+  get <- function(){#
+    x#
+  }#
+  setSolve <- function(inverse) {#
+    s <<- inverse #
+  }#
+  getSolve <- function() {#
+    s#
+  list(set=set, get=get,#
+       setSolve=setSolve, getSolve=getSolve)#
+}#
+#
+cacheSolve <- function(x, ...) {#
+  s <- x$getSolve()#
+  if(is.null(s)) {#
+    data <- x$get()#
+    s <- solve(data,...)    # otherwise computes mean#
+    x$setSolve(s)            # calls function to cache that new mean#
+    s                       # returns mean    #
+  }  #
+  else {#
+    message("getting cached data")#
+    return(s)      # exits function without further calculation#
+  }  #
+}
+}
+m <- matrix(c(1:20),4,5)
+mat <- makeCacheMatrix(m)
+cacheSolve(mat)
+mat1 <- cacheSolve(mat)
